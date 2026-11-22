@@ -1,0 +1,13 @@
+/HRI_room_drone/Library/
+/HRI_room_drone/Temp/
+/HRI_room_drone/Logs/
+/HRI_room_drone/UserSettings/
+/HRI_room_drone/obj/
+/HRI_room_drone/.vs/
+/HRI_room_drone/.vscode/
+/HRI_room_drone/*.csproj
+/HRI_room_drone/*.sln
+/HRI_room_drone/*.slnx
+/Builds/
+/dist/
+questionnaire_results.csv

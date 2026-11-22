@@ -1,0 +1,6 @@
+qwen-tts==0.1.1
+faster-whisper==1.2.1
+# Faster Whisper 1.2.1 passes metadata_errors to av.open.
+av==16.1.0
+sounddevice==0.5.5
+soundfile==0.13.1

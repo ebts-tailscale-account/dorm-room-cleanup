@@ -1,0 +1,16 @@
+{
+  "lines": [
+    { "id": "wake", "text": "Good morning! Press E to get up. Let's clean the room together." },
+    { "id": "pickup", "text": "Come closer and press E to pick it up." },
+    { "id": "surface", "text": "Come closer and press E to clean the surface." },
+    { "id": "clean-desk-smudge", "text": "There's a smudge on the desk. Come closer and press E to clean it." },
+    { "id": "next", "text": "Nice work! Let's find the next one." },
+    { "id": "complete", "text": "Great job! The room is clean. I'm heading back to charge." },
+    { "id": "red-soda-can", "text": "That's a red soda can. Come closer and press E to pick it up." },
+    { "id": "crushed-green-can", "text": "That's a crushed green can. Come closer and press E to pick it up." },
+    { "id": "apple-core", "text": "That's an apple core. Come closer and press E to pick it up." },
+    { "id": "discarded-newspaper", "text": "That's a discarded newspaper. Come closer and press E to pick it up." },
+    { "id": "half-eaten-burger", "text": "That's a half-eaten burger. Come closer and press E to pick it up." },
+    { "id": "orange-soda-can", "text": "That's an orange soda can. Come closer and press E to pick it up." }
+  ]
+}

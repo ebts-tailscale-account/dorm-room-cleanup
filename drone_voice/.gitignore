@@ -1,0 +1,6 @@
+/.venv/
+/.python/
+/.uv-cache/
+/.models/
+/__pycache__/
+/*.wav

@@ -123,6 +123,7 @@ public sealed class DormDroneController : MonoBehaviour
 
     private GameObject FindNearest()
     {
+        // Measure from the drone's visual center so the order follows its flight path.
         GameObject nearest = null;
         float best = float.PositiveInfinity;
         foreach (var item in remaining)
@@ -147,6 +148,7 @@ public sealed class DormDroneController : MonoBehaviour
     {
         if ((transform.position - goal).sqrMagnitude < 0.0001f) yield break;
         motor.Play();
+        // Cross the room above the furniture, then descend to the target or dock.
         yield return MoveTo(new Vector3(transform.position.x, cruiseHeight, transform.position.z));
         yield return MoveTo(new Vector3(goal.x, cruiseHeight, goal.z));
         yield return MoveTo(goal);

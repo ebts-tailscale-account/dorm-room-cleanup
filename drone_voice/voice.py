@@ -6,6 +6,7 @@ QWEN_MODEL = "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice"
 
 
 def reply_to(transcript: str) -> str:
+    # Match phrases and keywords to a small set of scripted replies.
     words = set(re.findall(r"[a-z]+", transcript.lower()))
     if not transcript.strip():
         return "I didn't hear you. Could you try again?"
@@ -29,6 +30,7 @@ class DroneVoice:
         self.speaker = None
 
     def transcribe(self, wav: str | Path) -> str:
+        # Load Whisper only when transcribing audio, and reuse it for later turns.
         if self.recognizer is None:
             from faster_whisper import WhisperModel
 
@@ -41,6 +43,7 @@ class DroneVoice:
     def synthesize(self, text: str, wav: str | Path) -> None:
         import soundfile as sf
 
+        # Load Qwen once and use CUDA automatically when available.
         if self.speaker is None:
             import torch
             from qwen_tts import Qwen3TTSModel

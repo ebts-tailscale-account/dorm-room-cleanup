@@ -14,6 +14,7 @@ def microphone_loop(voice: DroneVoice, seconds: int) -> None:
     import soundfile as sf
 
     sample_rate = int(sd.query_devices(kind="input")["default_samplerate"])
+    # Keep microphone recordings and replies in a temporary folder for this session.
     with TemporaryDirectory() as directory:
         input_wav = Path(directory) / "player.wav"
         output_wav = Path(directory) / "drone.wav"
@@ -60,6 +61,7 @@ def main() -> int:
         if not file_mode:
             microphone_loop(voice, args.seconds)
             return 0
+        # Keep stdout reserved for JSON so another program can read the result.
         with redirect_stdout(sys.stderr):
             if args.input is not None:
                 result = voice.respond(args.input, args.output)
